@@ -1,0 +1,73 @@
+\hypertarget{classReader}{
+\section{Reader Class Reference}
+\label{classReader}\index{Reader@{Reader}}
+}
+
+
+{\ttfamily \#include $<$PE\_\-Reader.h$>$}
+
+Inheritance diagram for Reader:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classReader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classReader_a48b1d822c048d481388fe05ff90b10f3}{LoadForStaticAnalise} (char $\ast$\&buf, unsigned int \&len, unsigned int \&start)=0
+\begin{DoxyCompactList}\small\item\em file pointer \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classReader_a0fe4ac206880263e042c5277370c679b}{LoadForDynamicAnalise} (char $\ast$\&buf, unsigned int \&len, unsigned int \&start, unsigned int \&base, unsigned int \&offset)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classReader_a583b5c9cc809c6630c9cade472c6f50e}{
+char $\ast$ {\bfseries filename}}
+\label{classReader_a583b5c9cc809c6630c9cade472c6f50e}
+
+\item 
+\hypertarget{classReader_ad8968e3f303fe580f2ab5077ae8be377}{
+FILE $\ast$ \hyperlink{classReader_ad8968e3f303fe580f2ab5077ae8be377}{fp}}
+\label{classReader_ad8968e3f303fe580f2ab5077ae8be377}
+
+\begin{DoxyCompactList}\small\item\em name of the input file \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class 
+
+\subsection{Member Function Documentation}
+\hypertarget{classReader_a0fe4ac206880263e042c5277370c679b}{
+\index{Reader@{Reader}!LoadForDynamicAnalise@{LoadForDynamicAnalise}}
+\index{LoadForDynamicAnalise@{LoadForDynamicAnalise}!Reader@{Reader}}
+\subsubsection[{LoadForDynamicAnalise}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Reader::LoadForDynamicAnalise (char $\ast$\& {\em buf}, \/  unsigned int \& {\em len}, \/  unsigned int \& {\em start}, \/  unsigned int \& {\em base}, \/  unsigned int \& {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classReader_a0fe4ac206880263e042c5277370c679b}
+Load entire file in buffer for Dynamic Analise 
+\begin{DoxyParams}{Parameters}
+\item[{\em buf}]buffer \item[{\em len}]buffer size \item[{\em start}]entry point \item[{\em base}]base=0x20000000L \item[{\em offset}]\end{DoxyParams}
+
+
+Implemented in \hyperlink{classRaw__Reader_a9e9a6cafa1b830d5c05b7a5e720c656c}{Raw\_\-Reader}, and \hyperlink{classPE__Reader_ad11f69fdbf231385c9ff7edd26913af7}{PE\_\-Reader}.
+
+\hypertarget{classReader_a48b1d822c048d481388fe05ff90b10f3}{
+\index{Reader@{Reader}!LoadForStaticAnalise@{LoadForStaticAnalise}}
+\index{LoadForStaticAnalise@{LoadForStaticAnalise}!Reader@{Reader}}
+\subsubsection[{LoadForStaticAnalise}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Reader::LoadForStaticAnalise (char $\ast$\& {\em buf}, \/  unsigned int \& {\em len}, \/  unsigned int \& {\em start})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classReader_a48b1d822c048d481388fe05ff90b10f3}
+
+
+file pointer 
+
+Load file in buffer for Static Analise 
+\begin{DoxyParams}{Parameters}
+\item[{\em buf}]buffer \item[{\em len}]buffer size \item[{\em start}]entry point =0 in network traffic search \end{DoxyParams}
+
+
+Implemented in \hyperlink{classRaw__Reader_a135e1dd4eadb2afaf201002d5402f21e}{Raw\_\-Reader}, and \hyperlink{classPE__Reader_a4b5e1c738c887247181c4e3d0f253c27}{PE\_\-Reader}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+PE\_\-Reader.h\end{DoxyCompactItemize}

@@ -1,0 +1,157 @@
+\hypertarget{classInstruction__Tree}{
+\section{Instruction\_\-Tree Class Reference}
+\label{classInstruction__Tree}\index{Instruction\_\-Tree@{Instruction\_\-Tree}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classInstruction__Tree_af6984c818a0944ed8d4b2d0b9d9ec6d6}{
+void {\bfseries Add} (\hyperlink{structInstructionList}{InstructionList} $\ast$\&, \hyperlink{structInstructionList}{InstructionList} $\ast$\&, \hyperlink{structInstructionList}{InstructionList} $\ast$\&)}
+\label{classInstruction__Tree_af6984c818a0944ed8d4b2d0b9d9ec6d6}
+
+\item 
+\hypertarget{classInstruction__Tree_aad648a9a8074aeafbf78e9c828afd048}{
+void {\bfseries Add\_\-Leaf} (\hyperlink{structInstruction__Leaf}{Instruction\_\-Leaf} $\ast$\&, int, \hyperlink{structInstructionList}{InstructionList} $\ast$\&, \hyperlink{structInstructionList}{InstructionList} $\ast$\&)}
+\label{classInstruction__Tree_aad648a9a8074aeafbf78e9c828afd048}
+
+\item 
+\hypertarget{classInstruction__Tree_a226966bee997b0565500106dc2e567d2}{
+int {\bfseries Obhod} (const char $\ast$, \hyperlink{classPolyUnpack}{PolyUnpack} \&)}
+\label{classInstruction__Tree_a226966bee997b0565500106dc2e567d2}
+
+\item 
+\hypertarget{classInstruction__Tree_acedea0a0f4812fe9ce27cac32d69c479}{
+void {\bfseries Obhod} (\hyperlink{structInstruction__Leaf}{Instruction\_\-Leaf} $\ast$\&, const char $\ast$, \hyperlink{structInstructionList}{InstructionList} $\ast$\&, \hyperlink{classPolyUnpack}{PolyUnpack} \&, int \&, int \&, int \&)}
+\label{classInstruction__Tree_acedea0a0f4812fe9ce27cac32d69c479}
+
+\item 
+\hypertarget{classInstruction__Tree_a1e067a81a558de827a34cc0e302ac5f6}{
+void {\bfseries Obhod2} (\hyperlink{structInstruction__Leaf}{Instruction\_\-Leaf} $\ast$\&)}
+\label{classInstruction__Tree_a1e067a81a558de827a34cc0e302ac5f6}
+
+\item 
+\hypertarget{classInstruction__Tree_a3342c7b010e7760be6034ca09efd97f8}{
+int {\bfseries Check} (\hyperlink{structInstruction__Leaf}{Instruction\_\-Leaf} $\ast$\&, \hyperlink{structInstructionList}{InstructionList} $\ast$\&, \hyperlink{structInstructionList}{InstructionList} $\ast$\&, \hyperlink{structInstructionList}{InstructionList} $\ast$\&, \hyperlink{structInstructionList}{InstructionList} $\ast$\&, bool \&flag)}
+\label{classInstruction__Tree_a3342c7b010e7760be6034ca09efd97f8}
+
+\item 
+\hypertarget{classInstruction__Tree_accb3231bdc3392cc49a8f6b6c79c82a1}{
+bool {\bfseries Is\_\-Empty} ()}
+\label{classInstruction__Tree_accb3231bdc3392cc49a8f6b6c79c82a1}
+
+\item 
+\hypertarget{classInstruction__Tree_aec22cabc78f01e5e543ddb0e6b15be56}{
+void {\bfseries Destructor} (\hyperlink{structInstruction__Leaf}{Instruction\_\-Leaf} $\ast$\&)}
+\label{classInstruction__Tree_aec22cabc78f01e5e543ddb0e6b15be56}
+
+\item 
+\hypertarget{classInstruction__Tree_ad53b5fae2cc7e47a3ec905eade35c8ae}{
+void {\bfseries CopyCommand} (\hyperlink{structInstruction__Leaf}{Instruction\_\-Leaf} $\ast$\&, const char $\ast$str)}
+\label{classInstruction__Tree_ad53b5fae2cc7e47a3ec905eade35c8ae}
+
+\item 
+\hyperlink{classInstruction__Tree_a5d61b36f6c10b48c4ec6d844226a81eb}{Instruction\_\-Tree} ()
+\begin{DoxyCompactList}\small\item\em root of the tree. Contains some condition jump command \item\end{DoxyCompactList}\item 
+void \hyperlink{classInstruction__Tree_a4c51fc44c6c0fd0d145900231fa1f059}{Add} (\hyperlink{structInstructionList}{InstructionList} $\ast$\&po1, \hyperlink{structInstructionList}{InstructionList} $\ast$\&po2, \hyperlink{structInstructionList}{InstructionList} $\ast$\&po3)
+\item 
+int \hyperlink{classInstruction__Tree_adef0585fdc4173cbd6baabd5bec79a56}{Obhod} (const char $\ast$command, \hyperlink{classPolyUnpack}{PolyUnpack} \&unpack)
+\item 
+void \hyperlink{classInstruction__Tree_afc8fc8d76c6ab64eedf78c551972f2df}{Obhod} (\hyperlink{structInstruction__Leaf}{Instruction\_\-Leaf} $\ast$\&p1, const char $\ast$command, \hyperlink{structInstructionList}{InstructionList} $\ast$\&original, \hyperlink{classPolyUnpack}{PolyUnpack} \&unpack, int \&kol, int \&iterator, int \&result)
+\item 
+void \hyperlink{classInstruction__Tree_ae791340bf25bcf1bf72072d6cc9a5d3e}{Print} (\hyperlink{structInstruction__Leaf}{Instruction\_\-Leaf} $\ast$\&p1)
+\item 
+int \hyperlink{classInstruction__Tree_ad9da870498b9d71cbb5a720253016712}{Check} (\hyperlink{structInstruction__Leaf}{Instruction\_\-Leaf} $\ast$\&p1, \hyperlink{structInstructionList}{InstructionList} $\ast$\&po1, \hyperlink{structInstructionList}{InstructionList} $\ast$\&po2, \hyperlink{structInstructionList}{InstructionList} $\ast$\&po3, \hyperlink{structInstructionList}{InstructionList} $\ast$\&original, bool \&flag)
+\item 
+bool \hyperlink{classInstruction__Tree_accb3231bdc3392cc49a8f6b6c79c82a1}{Is\_\-Empty} ()
+\item 
+void \hyperlink{classInstruction__Tree_a3ede055013058a1f9abefb5f50c02423}{Destructor} (\hyperlink{structInstruction__Leaf}{Instruction\_\-Leaf} $\ast$\&p1)
+\item 
+\hyperlink{classInstruction__Tree_abbd3825561af346def028707498fbd9b}{$\sim$Instruction\_\-Tree} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classInstruction__Tree_a5d61b36f6c10b48c4ec6d844226a81eb}{
+\index{Instruction\_\-Tree@{Instruction\_\-Tree}!Instruction\_\-Tree@{Instruction\_\-Tree}}
+\index{Instruction\_\-Tree@{Instruction\_\-Tree}!Instruction_Tree@{Instruction\_\-Tree}}
+\subsubsection[{Instruction\_\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}Instruction\_\-Tree::Instruction\_\-Tree ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classInstruction__Tree_a5d61b36f6c10b48c4ec6d844226a81eb}
+
+
+root of the tree. Contains some condition jump command 
+
+Constructor by default \hypertarget{classInstruction__Tree_abbd3825561af346def028707498fbd9b}{
+\index{Instruction\_\-Tree@{Instruction\_\-Tree}!$\sim$Instruction\_\-Tree@{$\sim$Instruction\_\-Tree}}
+\index{$\sim$Instruction\_\-Tree@{$\sim$Instruction\_\-Tree}!Instruction_Tree@{Instruction\_\-Tree}}
+\subsubsection[{$\sim$Instruction\_\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}Instruction\_\-Tree::$\sim$Instruction\_\-Tree ()}}
+\label{classInstruction__Tree_abbd3825561af346def028707498fbd9b}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classInstruction__Tree_a4c51fc44c6c0fd0d145900231fa1f059}{
+\index{Instruction\_\-Tree@{Instruction\_\-Tree}!Add@{Add}}
+\index{Add@{Add}!Instruction_Tree@{Instruction\_\-Tree}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}void Instruction\_\-Tree::Add ({\bf InstructionList} $\ast$\& {\em po1}, \/  {\bf InstructionList} $\ast$\& {\em po2}, \/  {\bf InstructionList} $\ast$\& {\em po3})}}
+\label{classInstruction__Tree_a4c51fc44c6c0fd0d145900231fa1f059}
+Add condition jump command in root with two possible instructions, which will be executed next, as leafs. 
+\begin{DoxyParams}{Parameters}
+\item[{\em po1}]condition inctruction \item[{\em po2}]next instruction after condition jump (left leaf) \item[{\em po3}]another instruction (right leaf) \end{DoxyParams}
+\hypertarget{classInstruction__Tree_ad9da870498b9d71cbb5a720253016712}{
+\index{Instruction\_\-Tree@{Instruction\_\-Tree}!Check@{Check}}
+\index{Check@{Check}!Instruction_Tree@{Instruction\_\-Tree}}
+\subsubsection[{Check}]{\setlength{\rightskip}{0pt plus 5cm}int Instruction\_\-Tree::Check ({\bf Instruction\_\-Leaf} $\ast$\& {\em p1}, \/  {\bf InstructionList} $\ast$\& {\em po1}, \/  {\bf InstructionList} $\ast$\& {\em po2}, \/  {\bf InstructionList} $\ast$\& {\em po3}, \/  {\bf InstructionList} $\ast$\& {\em original}, \/  bool \& {\em flag})}}
+\label{classInstruction__Tree_ad9da870498b9d71cbb5a720253016712}
+Sometimes all valid leafs contain the same condition instructrion, as a root. So we have 'loop'. This function checks for this loops and deletes them. This function uses recursion! 
+\begin{DoxyParams}{Parameters}
+\item[{\em p1}]temporary root \item[{\em po1}]pointer to instruction in original root \item[{\em po2}]pointer to instruction in left leaf under original root \item[{\em po3}]pointer to instruction in right leaf under original root \item[{\em original}]pointer to instruction in original instruction \item[{\em flag}]is true if loop is presented \end{DoxyParams}
+\hypertarget{classInstruction__Tree_a3ede055013058a1f9abefb5f50c02423}{
+\index{Instruction\_\-Tree@{Instruction\_\-Tree}!Destructor@{Destructor}}
+\index{Destructor@{Destructor}!Instruction_Tree@{Instruction\_\-Tree}}
+\subsubsection[{Destructor}]{\setlength{\rightskip}{0pt plus 5cm}void Instruction\_\-Tree::Destructor ({\bf Instruction\_\-Leaf} $\ast$\& {\em p1})}}
+\label{classInstruction__Tree_a3ede055013058a1f9abefb5f50c02423}
+Deletes all tree and makes root NULL. Function uses recursion. 
+\begin{DoxyParams}{Parameters}
+\item[{\em p1}]temporary root \end{DoxyParams}
+\hypertarget{classInstruction__Tree_accb3231bdc3392cc49a8f6b6c79c82a1}{
+\index{Instruction\_\-Tree@{Instruction\_\-Tree}!Is\_\-Empty@{Is\_\-Empty}}
+\index{Is\_\-Empty@{Is\_\-Empty}!Instruction_Tree@{Instruction\_\-Tree}}
+\subsubsection[{Is\_\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Instruction\_\-Tree::Is\_\-Empty ()}}
+\label{classInstruction__Tree_accb3231bdc3392cc49a8f6b6c79c82a1}
+Checks if root is empty \begin{DoxyReturn}{Returns}
+true if NULL, false if is not NULL. 
+\end{DoxyReturn}
+\hypertarget{classInstruction__Tree_afc8fc8d76c6ab64eedf78c551972f2df}{
+\index{Instruction\_\-Tree@{Instruction\_\-Tree}!Obhod@{Obhod}}
+\index{Obhod@{Obhod}!Instruction_Tree@{Instruction\_\-Tree}}
+\subsubsection[{Obhod}]{\setlength{\rightskip}{0pt plus 5cm}void Instruction\_\-Tree::Obhod ({\bf Instruction\_\-Leaf} $\ast$\& {\em p1}, \/  const char $\ast$ {\em command}, \/  {\bf InstructionList} $\ast$\& {\em original}, \/  {\bf PolyUnpack} \& {\em unpack}, \/  int \& {\em kol}, \/  int \& {\em iterator}, \/  int \& {\em result})}}
+\label{classInstruction__Tree_afc8fc8d76c6ab64eedf78c551972f2df}
+The search is performed only in legal branches. To do this we compare 'legal' field in every node. If leaf is valid, one or two branches are added to it. This function uses recursion! 
+\begin{DoxyParams}{Parameters}
+\item[{\em p1}]temporary root \item[{\em command}]\item[{\em original}]pointer to \hyperlink{structInstructionList}{InstructionList} \item[{\em unpack}]\item[{\em kol}]number of valid leafs \item[{\em iterator}]\item[{\em result}]\end{DoxyParams}
+\hypertarget{classInstruction__Tree_adef0585fdc4173cbd6baabd5bec79a56}{
+\index{Instruction\_\-Tree@{Instruction\_\-Tree}!Obhod@{Obhod}}
+\index{Obhod@{Obhod}!Instruction_Tree@{Instruction\_\-Tree}}
+\subsubsection[{Obhod}]{\setlength{\rightskip}{0pt plus 5cm}int Instruction\_\-Tree::Obhod (const char $\ast$ {\em command}, \/  {\bf PolyUnpack} \& {\em unpack})}}
+\label{classInstruction__Tree_adef0585fdc4173cbd6baabd5bec79a56}
+When root is not empty, we need to compare executed instruction with all leaf instructions in the tree and check amount of legal leafs. If there are not any legal instructions or just one, we need to delete tree. 
+\begin{DoxyParams}{Parameters}
+\item[{\em command}]executed command to compare with \item[{\em unpack}]We need to compare command with leaf and if it is legal to find another possible ways \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if there are not any legal instructions, 1 in another case return a number$>$0. 
+\end{DoxyReturn}
+\hypertarget{classInstruction__Tree_ae791340bf25bcf1bf72072d6cc9a5d3e}{
+\index{Instruction\_\-Tree@{Instruction\_\-Tree}!Print@{Print}}
+\index{Print@{Print}!Instruction_Tree@{Instruction\_\-Tree}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void Instruction\_\-Tree::Print ({\bf Instruction\_\-Leaf} $\ast$\& {\em p1})}}
+\label{classInstruction__Tree_ae791340bf25bcf1bf72072d6cc9a5d3e}
+Print all tree 
+\begin{DoxyParams}{Parameters}
+\item[{\em p1}]temporary root \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Instruction\_\-Tree.h\item 
+PolyUnpack.h\item 
+Instruction\_\-Tree.cpp\item 
+PolyUnpack.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,180 @@
+\hypertarget{classPolyUnpack}{
+\section{PolyUnpack Class Reference}
+\label{classPolyUnpack}\index{PolyUnpack@{PolyUnpack}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPolyUnpack_a495a7377ee57cde68b5448523ad9dbd2}{PolyUnpack} ()
+\begin{DoxyCompactList}\small\item\em number of invalid instructions in file \item\end{DoxyCompactList}\item 
+\hyperlink{classPolyUnpack_a37b0a31d4565390894037d2dc9b8fe08}{$\sim$PolyUnpack} ()
+\item 
+void \hyperlink{classPolyUnpack_a9fba41c1e0852210e7ac0eddeeba843d}{AddInstruction} (\hyperlink{structInstructionList}{InstructionList} $\ast$\&p1, const char $\ast$string, const int number, const int length, const bool flag)
+\item 
+void \hyperlink{classPolyUnpack_a6c4a3e26f38983c9a1134b98614f1cdb}{FindPadding} () const 
+\item 
+bool \hyperlink{classPolyUnpack_a49213dec58ad78d176c491f16bbc14c5}{FindFirstInstruction} (\hyperlink{structInstructionList}{InstructionList} $\ast$\&p) const 
+\item 
+bool \hyperlink{classPolyUnpack_ae4797cec6caf7e9927e930ef58690749}{FindInstruction} (\hyperlink{structInstructionList}{InstructionList} $\ast$\&p, const int number) const 
+\item 
+bool \hyperlink{classPolyUnpack_a8975a0eb244e7fdd8e7acea9555227bf}{is\_\-valid\_\-number} (int number) const 
+\item 
+void \hyperlink{classPolyUnpack_a3940f19400e857be686db4fe3789714b}{StaticAnalise} (const char $\ast$FileName, const int key)
+\item 
+void \hyperlink{classPolyUnpack_a7258cb80115be67044a9442086b19bc6}{DynamicAnalise} (const char $\ast$FileName, const int key)
+\item 
+int \hyperlink{classPolyUnpack_a70dca9f1f731890af945b5070d9bdb0b}{Compare} (\hyperlink{structInstructionList}{InstructionList} $\ast$\&p, const char $\ast$command, int flag, const unsigned int old\_\-eip)
+\item 
+int \hyperlink{classPolyUnpack_a2eaa3c2d81d64f76659dadc75c931a89}{FindNextInstruction} (\hyperlink{structInstructionList}{InstructionList} $\ast$\&p, \hyperlink{structInstructionList}{InstructionList} $\ast$\&p2, const char $\ast$command, int \&iterator)
+\item 
+void \hyperlink{classPolyUnpack_a1eda34787a9b8633621a6b28fd86df78}{BinaryDump} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPolyUnpack_a495a7377ee57cde68b5448523ad9dbd2}{
+\index{PolyUnpack@{PolyUnpack}!PolyUnpack@{PolyUnpack}}
+\index{PolyUnpack@{PolyUnpack}!PolyUnpack@{PolyUnpack}}
+\subsubsection[{PolyUnpack}]{\setlength{\rightskip}{0pt plus 5cm}PolyUnpack::PolyUnpack ()}}
+\label{classPolyUnpack_a495a7377ee57cde68b5448523ad9dbd2}
+
+
+number of invalid instructions in file 
+
+Constructor \hypertarget{classPolyUnpack_a37b0a31d4565390894037d2dc9b8fe08}{
+\index{PolyUnpack@{PolyUnpack}!$\sim$PolyUnpack@{$\sim$PolyUnpack}}
+\index{$\sim$PolyUnpack@{$\sim$PolyUnpack}!PolyUnpack@{PolyUnpack}}
+\subsubsection[{$\sim$PolyUnpack}]{\setlength{\rightskip}{0pt plus 5cm}PolyUnpack::$\sim$PolyUnpack ()}}
+\label{classPolyUnpack_a37b0a31d4565390894037d2dc9b8fe08}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classPolyUnpack_a9fba41c1e0852210e7ac0eddeeba843d}{
+\index{PolyUnpack@{PolyUnpack}!AddInstruction@{AddInstruction}}
+\index{AddInstruction@{AddInstruction}!PolyUnpack@{PolyUnpack}}
+\subsubsection[{AddInstruction}]{\setlength{\rightskip}{0pt plus 5cm}void PolyUnpack::AddInstruction ({\bf InstructionList} $\ast$\& {\em p1}, \/  const char $\ast$ {\em string}, \/  const int {\em number}, \/  const int {\em length}, \/  const bool {\em flag})}}
+\label{classPolyUnpack_a9fba41c1e0852210e7ac0eddeeba843d}
+Is used in Static Analise to add disassembled instructions in list 
+\begin{DoxyParams}{Parameters}
+\item[{\em p1}]last instruction in list \item[{\em string}]disassembled instruction in INTEL format \item[{\em number}]offset of instruction from code section \item[{\em length}]length of instruction \item[{\em flag}]true if instruction is entry point, false in other case \end{DoxyParams}
+\hypertarget{classPolyUnpack_a1eda34787a9b8633621a6b28fd86df78}{
+\index{PolyUnpack@{PolyUnpack}!BinaryDump@{BinaryDump}}
+\index{BinaryDump@{BinaryDump}!PolyUnpack@{PolyUnpack}}
+\subsubsection[{BinaryDump}]{\setlength{\rightskip}{0pt plus 5cm}void PolyUnpack::BinaryDump ()}}
+\label{classPolyUnpack_a1eda34787a9b8633621a6b28fd86df78}
+Helps to work with buffer after emulation 
+\begin{DoxyParams}{Parameters}
+\item[{\em buf}]buffer \end{DoxyParams}
+\hypertarget{classPolyUnpack_a70dca9f1f731890af945b5070d9bdb0b}{
+\index{PolyUnpack@{PolyUnpack}!Compare@{Compare}}
+\index{Compare@{Compare}!PolyUnpack@{PolyUnpack}}
+\subsubsection[{Compare}]{\setlength{\rightskip}{0pt plus 5cm}int PolyUnpack::Compare ({\bf InstructionList} $\ast$\& {\em p}, \/  const char $\ast$ {\em command}, \/  int {\em flag}, \/  const unsigned int {\em old\_\-eip})}}
+\label{classPolyUnpack_a70dca9f1f731890af945b5070d9bdb0b}
+Compares command that was executed with its static view. 
+\begin{DoxyParams}{Parameters}
+\item[{\em p}]static view of supposed instruction \item[{\em command}]command that was just executed \item[{\em flag}]flag of result \item[{\em old\_\-eip}]eip pointer before execution \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item 1 if commands are simple and equal 
+\item -\/1 if commands are not equal 
+\item 0 if commands are condition and equal 
+\item 2 if when instruction call\mbox{[}\mbox{]} or jmp\mbox{[}\mbox{]} was found 
+\item 3 when instruction call, ret, retn was found 
+\item 4 when stack is empty 
+\item 5 when invalid address in case of jump reg or call reg 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{classPolyUnpack_a7258cb80115be67044a9442086b19bc6}{
+\index{PolyUnpack@{PolyUnpack}!DynamicAnalise@{DynamicAnalise}}
+\index{DynamicAnalise@{DynamicAnalise}!PolyUnpack@{PolyUnpack}}
+\subsubsection[{DynamicAnalise}]{\setlength{\rightskip}{0pt plus 5cm}void PolyUnpack::DynamicAnalise (const char $\ast$ {\em FileName}, \/  const int {\em key})}}
+\label{classPolyUnpack_a7258cb80115be67044a9442086b19bc6}
+Generates Dynamic analise. Prints number of unvalid instructions or message \char`\"{}File is valid\char`\"{}. Emulator ignores calls and jumps outside the program.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em FileName}]file name to be executed \item[{\em key}]is 1 to see dynamic disassembling, =0 in other case \end{DoxyParams}
+
+
+We have to
+
+do this because sometimes eip doesn't point on proper po sition even after good parse and good step. flag==1 and flag==2 means that instructions are simple, not branch/condition instruction
+
+not nessesary now, but in network traffic
+
+search is very usefull 
+
+\hypertarget{classPolyUnpack_a49213dec58ad78d176c491f16bbc14c5}{
+\index{PolyUnpack@{PolyUnpack}!FindFirstInstruction@{FindFirstInstruction}}
+\index{FindFirstInstruction@{FindFirstInstruction}!PolyUnpack@{PolyUnpack}}
+\subsubsection[{FindFirstInstruction}]{\setlength{\rightskip}{0pt plus 5cm}bool PolyUnpack::FindFirstInstruction ({\bf InstructionList} $\ast$\& {\em p}) const}}
+\label{classPolyUnpack_a49213dec58ad78d176c491f16bbc14c5}
+Finds instruction, which is entry point. 
+\begin{DoxyParams}{Parameters}
+\item[{\em p}]pointer to the entry point instruction \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it is found, false in another case 
+\end{DoxyReturn}
+\hypertarget{classPolyUnpack_ae4797cec6caf7e9927e930ef58690749}{
+\index{PolyUnpack@{PolyUnpack}!FindInstruction@{FindInstruction}}
+\index{FindInstruction@{FindInstruction}!PolyUnpack@{PolyUnpack}}
+\subsubsection[{FindInstruction}]{\setlength{\rightskip}{0pt plus 5cm}bool PolyUnpack::FindInstruction ({\bf InstructionList} $\ast$\& {\em p}, \/  const int {\em number}) const}}
+\label{classPolyUnpack_ae4797cec6caf7e9927e930ef58690749}
+Finds next instruction. 
+\begin{DoxyParams}{Parameters}
+\item[{\em p}]pointer to the instruction \item[{\em number}]offset of this instruction \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it is found, false in another case 
+\end{DoxyReturn}
+\hypertarget{classPolyUnpack_a2eaa3c2d81d64f76659dadc75c931a89}{
+\index{PolyUnpack@{PolyUnpack}!FindNextInstruction@{FindNextInstruction}}
+\index{FindNextInstruction@{FindNextInstruction}!PolyUnpack@{PolyUnpack}}
+\subsubsection[{FindNextInstruction}]{\setlength{\rightskip}{0pt plus 5cm}int PolyUnpack::FindNextInstruction ({\bf InstructionList} $\ast$\& {\em p}, \/  {\bf InstructionList} $\ast$\& {\em p2}, \/  const char $\ast$ {\em command}, \/  int \& {\em iterator})}}
+\label{classPolyUnpack_a2eaa3c2d81d64f76659dadc75c931a89}
+Finds next instruction 
+\begin{DoxyParams}{Parameters}
+\item[{\em p}]first instruction \item[{\em p2}]second instruction \item[{\em command}]executed command \item[{\em iterator}]we need to push and pop addresses from stack just once \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item 1 if commands are simple and equal 
+\item -\/1 if commands are not equal 
+\item 0 if commands are condition and equal 
+\item 2 if when instruction call\mbox{[}\mbox{]} or jmp\mbox{[}\mbox{]} was found 
+\item 3 when instruction call, ret, retn was found 
+\item 4 when stack is empty 
+\item 5 when invalid address in case of jump reg or call reg 
+\item 6 int XX was found. We need to ignre next instruction until sys call would not end 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{classPolyUnpack_a6c4a3e26f38983c9a1134b98614f1cdb}{
+\index{PolyUnpack@{PolyUnpack}!FindPadding@{FindPadding}}
+\index{FindPadding@{FindPadding}!PolyUnpack@{PolyUnpack}}
+\subsubsection[{FindPadding}]{\setlength{\rightskip}{0pt plus 5cm}void PolyUnpack::FindPadding () const}}
+\label{classPolyUnpack_a6c4a3e26f38983c9a1134b98614f1cdb}
+All sections in PE format cotain padding opcodes 00 or add eax,al. We don't need to execute them. When the eip points to this instructions the execution halts. \hypertarget{classPolyUnpack_a8975a0eb244e7fdd8e7acea9555227bf}{
+\index{PolyUnpack@{PolyUnpack}!is\_\-valid\_\-number@{is\_\-valid\_\-number}}
+\index{is\_\-valid\_\-number@{is\_\-valid\_\-number}!PolyUnpack@{PolyUnpack}}
+\subsubsection[{is\_\-valid\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}bool PolyUnpack::is\_\-valid\_\-number (int {\em number}) const}}
+\label{classPolyUnpack_a8975a0eb244e7fdd8e7acea9555227bf}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em number}]offset of this instruction \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it is valid 
+\end{DoxyReturn}
+\hypertarget{classPolyUnpack_a3940f19400e857be686db4fe3789714b}{
+\index{PolyUnpack@{PolyUnpack}!StaticAnalise@{StaticAnalise}}
+\index{StaticAnalise@{StaticAnalise}!PolyUnpack@{PolyUnpack}}
+\subsubsection[{StaticAnalise}]{\setlength{\rightskip}{0pt plus 5cm}void PolyUnpack::StaticAnalise (const char $\ast$ {\em FileName}, \/  const int {\em key})}}
+\label{classPolyUnpack_a3940f19400e857be686db4fe3789714b}
+Generates static code view and list of disassembled instructions 
+\begin{DoxyParams}{Parameters}
+\item[{\em FileName}]file name to be disassembled \item[{\em key}]is 1 to see static disassembling, =0 in other case \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+PolyUnpack.h\item 
+PolyUnpack.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,77 @@
+\hypertarget{classRaw__Reader}{
+\section{Raw\_\-Reader Class Reference}
+\label{classRaw__Reader}\index{Raw\_\-Reader@{Raw\_\-Reader}}
+}
+
+
+{\ttfamily \#include $<$PE\_\-Reader.h$>$}
+
+Inheritance diagram for Raw\_\-Reader:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classRaw__Reader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRaw__Reader_ae75aca0f781eca8af23e5ac27fa89aae}{Raw\_\-Reader} (const char $\ast$name)
+\item 
+virtual void \hyperlink{classRaw__Reader_a135e1dd4eadb2afaf201002d5402f21e}{LoadForStaticAnalise} (char $\ast$\&buf, unsigned int \&len, unsigned int \&start)
+\item 
+virtual void \hyperlink{classRaw__Reader_a9e9a6cafa1b830d5c05b7a5e720c656c}{LoadForDynamicAnalise} (char $\ast$\&buf, unsigned int \&len, unsigned int \&start, unsigned int \&base, unsigned int \&offset)
+\item 
+virtual \hyperlink{classRaw__Reader_a146ea047af0f0319ada57c5e5768992e}{$\sim$Raw\_\-Reader} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Reads file in $\ast$.Raw format. Format is used in network traffic search. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classRaw__Reader_ae75aca0f781eca8af23e5ac27fa89aae}{
+\index{Raw\_\-Reader@{Raw\_\-Reader}!Raw\_\-Reader@{Raw\_\-Reader}}
+\index{Raw\_\-Reader@{Raw\_\-Reader}!Raw_Reader@{Raw\_\-Reader}}
+\subsubsection[{Raw\_\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}Raw\_\-Reader::Raw\_\-Reader (const char $\ast$ {\em name})}}
+\label{classRaw__Reader_ae75aca0f781eca8af23e5ac27fa89aae}
+Constructor 
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]file name \end{DoxyParams}
+\hypertarget{classRaw__Reader_a146ea047af0f0319ada57c5e5768992e}{
+\index{Raw\_\-Reader@{Raw\_\-Reader}!$\sim$Raw\_\-Reader@{$\sim$Raw\_\-Reader}}
+\index{$\sim$Raw\_\-Reader@{$\sim$Raw\_\-Reader}!Raw_Reader@{Raw\_\-Reader}}
+\subsubsection[{$\sim$Raw\_\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}Raw\_\-Reader::$\sim$Raw\_\-Reader ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classRaw__Reader_a146ea047af0f0319ada57c5e5768992e}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classRaw__Reader_a9e9a6cafa1b830d5c05b7a5e720c656c}{
+\index{Raw\_\-Reader@{Raw\_\-Reader}!LoadForDynamicAnalise@{LoadForDynamicAnalise}}
+\index{LoadForDynamicAnalise@{LoadForDynamicAnalise}!Raw_Reader@{Raw\_\-Reader}}
+\subsubsection[{LoadForDynamicAnalise}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\_\-Reader::LoadForDynamicAnalise (char $\ast$\& {\em buf}, \/  unsigned int \& {\em len}, \/  unsigned int \& {\em start}, \/  unsigned int \& {\em base}, \/  unsigned int \& {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classRaw__Reader_a9e9a6cafa1b830d5c05b7a5e720c656c}
+Load entire file in buffer for Dynamic Analise 
+\begin{DoxyParams}{Parameters}
+\item[{\em buf}]buffer \item[{\em len}]buffer size \item[{\em start}]entry point =0 in network traffic search \item[{\em base}]is 0x20000000L \item[{\em offset}]is 0 in network traffic search \end{DoxyParams}
+
+
+Implements \hyperlink{classReader_a0fe4ac206880263e042c5277370c679b}{Reader}.
+
+\hypertarget{classRaw__Reader_a135e1dd4eadb2afaf201002d5402f21e}{
+\index{Raw\_\-Reader@{Raw\_\-Reader}!LoadForStaticAnalise@{LoadForStaticAnalise}}
+\index{LoadForStaticAnalise@{LoadForStaticAnalise}!Raw_Reader@{Raw\_\-Reader}}
+\subsubsection[{LoadForStaticAnalise}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\_\-Reader::LoadForStaticAnalise (char $\ast$\& {\em buf}, \/  unsigned int \& {\em len}, \/  unsigned int \& {\em start})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classRaw__Reader_a135e1dd4eadb2afaf201002d5402f21e}
+Load entire file in buffer for Static Analise 
+\begin{DoxyParams}{Parameters}
+\item[{\em buf}]buffer \item[{\em len}]buffer size \item[{\em start}]entry point =0 in network traffic search \end{DoxyParams}
+
+
+Implements \hyperlink{classReader_a48b1d822c048d481388fe05ff90b10f3}{Reader}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+PE\_\-Reader.h\item 
+PE\_\-Reader.cpp\end{DoxyCompactItemize}

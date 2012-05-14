@@ -1,0 +1,160 @@
+\hypertarget{classPE__Reader}{
+\section{PE\_\-Reader Class Reference}
+\label{classPE__Reader}\index{PE\_\-Reader@{PE\_\-Reader}}
+}
+
+
+{\ttfamily \#include $<$PE\_\-Reader.h$>$}
+
+Inheritance diagram for PE\_\-Reader:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classPE__Reader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPE__Reader_a3ee3c529ba07e5cfe8d288fa3ebfa4f9}{PE\_\-Reader} (const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em rva address of text sectioon \item\end{DoxyCompactList}\item 
+\hyperlink{classPE__Reader_a49781859b63b5d08f49e306f62fc103d}{PE\_\-Reader} (const \hyperlink{classPE__Reader}{PE\_\-Reader} $\ast$pe\_\-reader)
+\item 
+virtual \hyperlink{classPE__Reader_a6fbfdcd447011a83ac2147874c8e8b4a}{$\sim$PE\_\-Reader} ()
+\item 
+virtual void \hyperlink{classPE__Reader_a4b5e1c738c887247181c4e3d0f253c27}{LoadForStaticAnalise} (char $\ast$\&buf, unsigned int \&len, unsigned int \&start)
+\item 
+virtual void \hyperlink{classPE__Reader_ad11f69fdbf231385c9ff7edd26913af7}{LoadForDynamicAnalise} (char $\ast$\&buf, unsigned int \&len, unsigned int \&start, unsigned int \&base, unsigned int \&offset)
+\item 
+void \hyperlink{classPE__Reader_a6d3abab07f8d39fd1414cad8efb06418}{PE\_\-HeaderOffset} ()
+\item 
+void \hyperlink{classPE__Reader_a32781a8fee1c88e2ec864ffd1657a192}{PE\_\-TableOffset} ()
+\item 
+void \hyperlink{classPE__Reader_a492ea400cbf11105f029faab31d0f3fa}{PE\_\-FileType} () const 
+\item 
+void \hyperlink{classPE__Reader_a6263cdcff862839e6fbbd296c0e060e8}{PE\_\-NumberOfEntries} ()
+\item 
+void \hyperlink{classPE__Reader_a37d6bf9d6e462f964d77115e29c22418}{PE\_\-EntryPoint} ()
+\item 
+void \hyperlink{classPE__Reader_a1f263c2df5da0e49bb5211617ae10335}{PE\_\-ImageBase} ()
+\item 
+void \hyperlink{classPE__Reader_a4896824d5df4cff3d693367fd8d8d454}{PE\_\-ObjectTable} ()
+\item 
+void \hyperlink{classPE__Reader_a70cf8c6c789cc8c5c96a2b9179043a24}{PE\_\-CodeSection} (int section\_\-offset)
+\item 
+void \hyperlink{classPE__Reader_a8303dc43c8732907ea8eff507728262b}{PE\_\-DataSection} (int data\_\-offset)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classReader}{Reader} for Portable Executable format 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPE__Reader_a3ee3c529ba07e5cfe8d288fa3ebfa4f9}{
+\index{PE\_\-Reader@{PE\_\-Reader}!PE\_\-Reader@{PE\_\-Reader}}
+\index{PE\_\-Reader@{PE\_\-Reader}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{PE\_\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}PE\_\-Reader::PE\_\-Reader (const char $\ast$ {\em name})}}
+\label{classPE__Reader_a3ee3c529ba07e5cfe8d288fa3ebfa4f9}
+
+
+rva address of text sectioon 
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]file name \end{DoxyParams}
+\hypertarget{classPE__Reader_a49781859b63b5d08f49e306f62fc103d}{
+\index{PE\_\-Reader@{PE\_\-Reader}!PE\_\-Reader@{PE\_\-Reader}}
+\index{PE\_\-Reader@{PE\_\-Reader}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{PE\_\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}PE\_\-Reader::PE\_\-Reader (const {\bf PE\_\-Reader} $\ast$ {\em pe\_\-reader})}}
+\label{classPE__Reader_a49781859b63b5d08f49e306f62fc103d}
+Copy Constructor 
+\begin{DoxyParams}{Parameters}
+\item[{\em pe\_\-reader}]\end{DoxyParams}
+\hypertarget{classPE__Reader_a6fbfdcd447011a83ac2147874c8e8b4a}{
+\index{PE\_\-Reader@{PE\_\-Reader}!$\sim$PE\_\-Reader@{$\sim$PE\_\-Reader}}
+\index{$\sim$PE\_\-Reader@{$\sim$PE\_\-Reader}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{$\sim$PE\_\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}PE\_\-Reader::$\sim$PE\_\-Reader ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classPE__Reader_a6fbfdcd447011a83ac2147874c8e8b4a}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classPE__Reader_ad11f69fdbf231385c9ff7edd26913af7}{
+\index{PE\_\-Reader@{PE\_\-Reader}!LoadForDynamicAnalise@{LoadForDynamicAnalise}}
+\index{LoadForDynamicAnalise@{LoadForDynamicAnalise}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{LoadForDynamicAnalise}]{\setlength{\rightskip}{0pt plus 5cm}void PE\_\-Reader::LoadForDynamicAnalise (char $\ast$\& {\em buf}, \/  unsigned int \& {\em len}, \/  unsigned int \& {\em start}, \/  unsigned int \& {\em base}, \/  unsigned int \& {\em offset})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classPE__Reader_ad11f69fdbf231385c9ff7edd26913af7}
+Load entire file for Dynamic Analise 
+\begin{DoxyParams}{Parameters}
+\item[{\em buf}]buffer \item[{\em len}]size of buffer \item[{\em start}]physical original entry point offset \item[{\em base}]is 0x20000000L \item[{\em offset}]physical text section offset \end{DoxyParams}
+
+
+Implements \hyperlink{classReader_a0fe4ac206880263e042c5277370c679b}{Reader}.
+
+\hypertarget{classPE__Reader_a4b5e1c738c887247181c4e3d0f253c27}{
+\index{PE\_\-Reader@{PE\_\-Reader}!LoadForStaticAnalise@{LoadForStaticAnalise}}
+\index{LoadForStaticAnalise@{LoadForStaticAnalise}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{LoadForStaticAnalise}]{\setlength{\rightskip}{0pt plus 5cm}void PE\_\-Reader::LoadForStaticAnalise (char $\ast$\& {\em buf}, \/  unsigned int \& {\em len}, \/  unsigned int \& {\em start})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classPE__Reader_a4b5e1c738c887247181c4e3d0f253c27}
+Load .text section for Static Analise 
+\begin{DoxyParams}{Parameters}
+\item[{\em buf}]buffer \item[{\em len}]size of buffer \item[{\em start}]physical entry point offset from code section \end{DoxyParams}
+
+
+Implements \hyperlink{classReader_a48b1d822c048d481388fe05ff90b10f3}{Reader}.
+
+\hypertarget{classPE__Reader_a70cf8c6c789cc8c5c96a2b9179043a24}{
+\index{PE\_\-Reader@{PE\_\-Reader}!PE\_\-CodeSection@{PE\_\-CodeSection}}
+\index{PE\_\-CodeSection@{PE\_\-CodeSection}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{PE\_\-CodeSection}]{\setlength{\rightskip}{0pt plus 5cm}void PE\_\-Reader::PE\_\-CodeSection (int {\em section\_\-offset})}}
+\label{classPE__Reader_a70cf8c6c789cc8c5c96a2b9179043a24}
+Works with code section in PE table 
+\begin{DoxyParams}{Parameters}
+\item[{\em section\_\-offset}]code section rva \end{DoxyParams}
+\hypertarget{classPE__Reader_a8303dc43c8732907ea8eff507728262b}{
+\index{PE\_\-Reader@{PE\_\-Reader}!PE\_\-DataSection@{PE\_\-DataSection}}
+\index{PE\_\-DataSection@{PE\_\-DataSection}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{PE\_\-DataSection}]{\setlength{\rightskip}{0pt plus 5cm}void PE\_\-Reader::PE\_\-DataSection (int {\em data\_\-offset})}}
+\label{classPE__Reader_a8303dc43c8732907ea8eff507728262b}
+Works with data section in PE table 
+\begin{DoxyParams}{Parameters}
+\item[{\em data\_\-offset}]data section rva \end{DoxyParams}
+\hypertarget{classPE__Reader_a37d6bf9d6e462f964d77115e29c22418}{
+\index{PE\_\-Reader@{PE\_\-Reader}!PE\_\-EntryPoint@{PE\_\-EntryPoint}}
+\index{PE\_\-EntryPoint@{PE\_\-EntryPoint}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{PE\_\-EntryPoint}]{\setlength{\rightskip}{0pt plus 5cm}void PE\_\-Reader::PE\_\-EntryPoint ()}}
+\label{classPE__Reader_a37d6bf9d6e462f964d77115e29c22418}
+Finds entry point rva \hypertarget{classPE__Reader_a492ea400cbf11105f029faab31d0f3fa}{
+\index{PE\_\-Reader@{PE\_\-Reader}!PE\_\-FileType@{PE\_\-FileType}}
+\index{PE\_\-FileType@{PE\_\-FileType}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{PE\_\-FileType}]{\setlength{\rightskip}{0pt plus 5cm}void PE\_\-Reader::PE\_\-FileType () const}}
+\label{classPE__Reader_a492ea400cbf11105f029faab31d0f3fa}
+Controls Format of PE file. If (format !=PE) then exit(1) \hypertarget{classPE__Reader_a6d3abab07f8d39fd1414cad8efb06418}{
+\index{PE\_\-Reader@{PE\_\-Reader}!PE\_\-HeaderOffset@{PE\_\-HeaderOffset}}
+\index{PE\_\-HeaderOffset@{PE\_\-HeaderOffset}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{PE\_\-HeaderOffset}]{\setlength{\rightskip}{0pt plus 5cm}void PE\_\-Reader::PE\_\-HeaderOffset ()}}
+\label{classPE__Reader_a6d3abab07f8d39fd1414cad8efb06418}
+Finds offset offset of PE header \hypertarget{classPE__Reader_a1f263c2df5da0e49bb5211617ae10335}{
+\index{PE\_\-Reader@{PE\_\-Reader}!PE\_\-ImageBase@{PE\_\-ImageBase}}
+\index{PE\_\-ImageBase@{PE\_\-ImageBase}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{PE\_\-ImageBase}]{\setlength{\rightskip}{0pt plus 5cm}void PE\_\-Reader::PE\_\-ImageBase ()}}
+\label{classPE__Reader_a1f263c2df5da0e49bb5211617ae10335}
+Finds image base \hypertarget{classPE__Reader_a6263cdcff862839e6fbbd296c0e060e8}{
+\index{PE\_\-Reader@{PE\_\-Reader}!PE\_\-NumberOfEntries@{PE\_\-NumberOfEntries}}
+\index{PE\_\-NumberOfEntries@{PE\_\-NumberOfEntries}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{PE\_\-NumberOfEntries}]{\setlength{\rightskip}{0pt plus 5cm}void PE\_\-Reader::PE\_\-NumberOfEntries ()}}
+\label{classPE__Reader_a6263cdcff862839e6fbbd296c0e060e8}
+Finds number of sections in table \hypertarget{classPE__Reader_a4896824d5df4cff3d693367fd8d8d454}{
+\index{PE\_\-Reader@{PE\_\-Reader}!PE\_\-ObjectTable@{PE\_\-ObjectTable}}
+\index{PE\_\-ObjectTable@{PE\_\-ObjectTable}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{PE\_\-ObjectTable}]{\setlength{\rightskip}{0pt plus 5cm}void PE\_\-Reader::PE\_\-ObjectTable ()}}
+\label{classPE__Reader_a4896824d5df4cff3d693367fd8d8d454}
+Finds code section. Many obphuscated files doesn't contain .text or.CODE section. \hyperlink{classIn}{In} this case we suppose that code section contains entry point address. \hypertarget{classPE__Reader_a32781a8fee1c88e2ec864ffd1657a192}{
+\index{PE\_\-Reader@{PE\_\-Reader}!PE\_\-TableOffset@{PE\_\-TableOffset}}
+\index{PE\_\-TableOffset@{PE\_\-TableOffset}!PE_Reader@{PE\_\-Reader}}
+\subsubsection[{PE\_\-TableOffset}]{\setlength{\rightskip}{0pt plus 5cm}void PE\_\-Reader::PE\_\-TableOffset ()}}
+\label{classPE__Reader_a32781a8fee1c88e2ec864ffd1657a192}
+Finds offset offset of PE table 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+PE\_\-Reader.h\item 
+PE\_\-Reader.cpp\end{DoxyCompactItemize}

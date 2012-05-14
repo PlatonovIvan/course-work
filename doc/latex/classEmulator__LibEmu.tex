@@ -1,0 +1,113 @@
+\hypertarget{classEmulator__LibEmu}{
+\section{Emulator\_\-LibEmu Class Reference}
+\label{classEmulator__LibEmu}\index{Emulator\_\-LibEmu@{Emulator\_\-LibEmu}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEmulator__LibEmu_ae8595b6312f2125ed061293d689ff23c}{Emulator\_\-LibEmu} ()
+\begin{DoxyCompactList}\small\item\em image base (from what address we need to load file for emulation) \item\end{DoxyCompactList}\item 
+\hyperlink{classEmulator__LibEmu_a358ea52a971cbb5e14b6e08bcbaa29fb}{$\sim$Emulator\_\-LibEmu} ()
+\item 
+void \hyperlink{classEmulator__LibEmu_af64acac5abd8f8c2e48ea8ac8e6a3a28}{begin} (char $\ast$\&buf, const unsigned int len, const unsigned int entry\_\-point, const unsigned int base)
+\item 
+void \hyperlink{classEmulator__LibEmu_a998a8239af4107121592764094de152c}{jump} (const unsigned int pos)
+\item 
+bool \hyperlink{classEmulator__LibEmu_a2d1424d0a52e51b37788e6186cc1ba9f}{step} ()
+\item 
+void \hyperlink{classEmulator__LibEmu_a8779c16bb5b588252c0d2d048c7954c5}{get\_\-command} (char $\ast$buf, const unsigned int size) const 
+\item 
+void \hyperlink{classEmulator__LibEmu_ab0b54d3e5a0b42ab48da798dc49b3306}{read\_\-block} (char $\ast$buf, const unsigned int size) const 
+\item 
+unsigned int \hyperlink{classEmulator__LibEmu_a574c79f85662bee6c54bf32f0203baf5}{get\_\-register} (const Register reg) const 
+\item 
+unsigned int \hyperlink{classEmulator__LibEmu_ad6f5f9fcfa552bf5865b6c9a432aa2ba}{get\_\-register} (char $\ast$\&string) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classEmulator__LibEmu_ae8595b6312f2125ed061293d689ff23c}{
+\index{Emulator\_\-LibEmu@{Emulator\_\-LibEmu}!Emulator\_\-LibEmu@{Emulator\_\-LibEmu}}
+\index{Emulator\_\-LibEmu@{Emulator\_\-LibEmu}!Emulator_LibEmu@{Emulator\_\-LibEmu}}
+\subsubsection[{Emulator\_\-LibEmu}]{\setlength{\rightskip}{0pt plus 5cm}Emulator\_\-LibEmu::Emulator\_\-LibEmu ()}}
+\label{classEmulator__LibEmu_ae8595b6312f2125ed061293d689ff23c}
+
+
+image base (from what address we need to load file for emulation) 
+
+Constructor \hypertarget{classEmulator__LibEmu_a358ea52a971cbb5e14b6e08bcbaa29fb}{
+\index{Emulator\_\-LibEmu@{Emulator\_\-LibEmu}!$\sim$Emulator\_\-LibEmu@{$\sim$Emulator\_\-LibEmu}}
+\index{$\sim$Emulator\_\-LibEmu@{$\sim$Emulator\_\-LibEmu}!Emulator_LibEmu@{Emulator\_\-LibEmu}}
+\subsubsection[{$\sim$Emulator\_\-LibEmu}]{\setlength{\rightskip}{0pt plus 5cm}Emulator\_\-LibEmu::$\sim$Emulator\_\-LibEmu ()}}
+\label{classEmulator__LibEmu_a358ea52a971cbb5e14b6e08bcbaa29fb}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classEmulator__LibEmu_af64acac5abd8f8c2e48ea8ac8e6a3a28}{
+\index{Emulator\_\-LibEmu@{Emulator\_\-LibEmu}!begin@{begin}}
+\index{begin@{begin}!Emulator_LibEmu@{Emulator\_\-LibEmu}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Emulator\_\-LibEmu::begin (char $\ast$\& {\em buf}, \/  const unsigned int {\em len}, \/  const unsigned int {\em entry\_\-point}, \/  const unsigned int {\em base})}}
+\label{classEmulator__LibEmu_af64acac5abd8f8c2e48ea8ac8e6a3a28}
+Loads file in emulator memory, sets all registers in 0 and sets eip to the entry point 
+\begin{DoxyParams}{Parameters}
+\item[{\em buf}]buffer \item[{\em len}]buffer size \item[{\em entry\_\-point}]entry point \item[{\em base}]image base \end{DoxyParams}
+\hypertarget{classEmulator__LibEmu_a8779c16bb5b588252c0d2d048c7954c5}{
+\index{Emulator\_\-LibEmu@{Emulator\_\-LibEmu}!get\_\-command@{get\_\-command}}
+\index{get\_\-command@{get\_\-command}!Emulator_LibEmu@{Emulator\_\-LibEmu}}
+\subsubsection[{get\_\-command}]{\setlength{\rightskip}{0pt plus 5cm}void Emulator\_\-LibEmu::get\_\-command (char $\ast$ {\em buf}, \/  const unsigned int {\em size}) const}}
+\label{classEmulator__LibEmu_a8779c16bb5b588252c0d2d048c7954c5}
+Reads size bytes into the buffer from emulator memory 
+\begin{DoxyParams}{Parameters}
+\item[{\em buf}]buffer where to read \item[{\em size}]size of buffer \end{DoxyParams}
+\hypertarget{classEmulator__LibEmu_ad6f5f9fcfa552bf5865b6c9a432aa2ba}{
+\index{Emulator\_\-LibEmu@{Emulator\_\-LibEmu}!get\_\-register@{get\_\-register}}
+\index{get\_\-register@{get\_\-register}!Emulator_LibEmu@{Emulator\_\-LibEmu}}
+\subsubsection[{get\_\-register}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Emulator\_\-LibEmu::get\_\-register (char $\ast$\& {\em string}) const}}
+\label{classEmulator__LibEmu_ad6f5f9fcfa552bf5865b6c9a432aa2ba}
+Gets value of register 
+\begin{DoxyParams}{Parameters}
+\item[{\em string}]string with register name \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value 
+\end{DoxyReturn}
+\hypertarget{classEmulator__LibEmu_a574c79f85662bee6c54bf32f0203baf5}{
+\index{Emulator\_\-LibEmu@{Emulator\_\-LibEmu}!get\_\-register@{get\_\-register}}
+\index{get\_\-register@{get\_\-register}!Emulator_LibEmu@{Emulator\_\-LibEmu}}
+\subsubsection[{get\_\-register}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Emulator\_\-LibEmu::get\_\-register (const Register {\em reg}) const}}
+\label{classEmulator__LibEmu_a574c79f85662bee6c54bf32f0203baf5}
+Gets value of register reg 
+\begin{DoxyParams}{Parameters}
+\item[{\em reg}]register \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value 
+\end{DoxyReturn}
+\hypertarget{classEmulator__LibEmu_a998a8239af4107121592764094de152c}{
+\index{Emulator\_\-LibEmu@{Emulator\_\-LibEmu}!jump@{jump}}
+\index{jump@{jump}!Emulator_LibEmu@{Emulator\_\-LibEmu}}
+\subsubsection[{jump}]{\setlength{\rightskip}{0pt plus 5cm}void Emulator\_\-LibEmu::jump (const unsigned int {\em pos})}}
+\label{classEmulator__LibEmu_a998a8239af4107121592764094de152c}
+Sets eip to the nesessary address 
+\begin{DoxyParams}{Parameters}
+\item[{\em pos}]address \end{DoxyParams}
+\hypertarget{classEmulator__LibEmu_ab0b54d3e5a0b42ab48da798dc49b3306}{
+\index{Emulator\_\-LibEmu@{Emulator\_\-LibEmu}!read\_\-block@{read\_\-block}}
+\index{read\_\-block@{read\_\-block}!Emulator_LibEmu@{Emulator\_\-LibEmu}}
+\subsubsection[{read\_\-block}]{\setlength{\rightskip}{0pt plus 5cm}void Emulator\_\-LibEmu::read\_\-block (char $\ast$ {\em buf}, \/  const unsigned int {\em size}) const}}
+\label{classEmulator__LibEmu_ab0b54d3e5a0b42ab48da798dc49b3306}
+Helps to work with buffer after emulation 
+\begin{DoxyParams}{Parameters}
+\item[{\em buf}]buffer \item[{\em size}]size of buffer \end{DoxyParams}
+\hypertarget{classEmulator__LibEmu_a2d1424d0a52e51b37788e6186cc1ba9f}{
+\index{Emulator\_\-LibEmu@{Emulator\_\-LibEmu}!step@{step}}
+\index{step@{step}!Emulator_LibEmu@{Emulator\_\-LibEmu}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}bool Emulator\_\-LibEmu::step ()}}
+\label{classEmulator__LibEmu_a2d1424d0a52e51b37788e6186cc1ba9f}
+Emulates execution of one instruction. Calls two functions bool emu\_\-cpu\_\-parse(cpu) and bool emu\_\-cpu\_\-step(cpu). \begin{DoxyReturn}{Returns}
+false if one of this functions return false. \hyperlink{classIn}{In} another case returns true. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Emulator\_\-LibEmu.h\item 
+Emulator\_\-LibEmu.cpp\end{DoxyCompactItemize}
