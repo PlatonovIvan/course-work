@@ -1,0 +1,520 @@
+
+
+
+Start of Static Analize!
+
+
+00000000  236966               and ebp,[ecx+0x66]
+00000003  6e                 outsb 
+00000004  64656620496e            and gs:[ecx+0x6e],cl
+0000000a  7374                jnc 0x80
+0000000c  7275                jc 0x83
+0000000e  6374696f              arpl [ecx+ebp*2+0x6f],si
+00000012  6e                 outsb 
+00000013  5f                 pop edi
+00000014  54                 push esp
+00000015  7265                jc 0x7c
+00000017  655f                gs pop edi
+00000019  48                 dec eax
+0000001a  0a23                or ah,[ebx]
+0000001c  646566696e652049          imul bp,gs:[esi+0x65],0x4920
+00000024  6e                 outsb 
+00000025  7374                jnc 0x9b
+00000027  7275                jc 0x9e
+00000029  6374696f              arpl [ecx+ebp*2+0x6f],si
+0000002d  6e                 outsb 
+0000002e  5f                 pop edi
+0000002f  54                 push esp
+00000030  7265                jc 0x97
+00000032  655f                gs pop edi
+00000034  48                 dec eax
+00000035  0a0a                or cl,[edx]
+00000037  23696e               and ebp,[ecx+0x6e]
+0000003a  636c7564              arpl [ebp+esi*2+0x64],bp
+0000003e  652022               and gs:[edx],ah
+00000041  49                 dec ecx
+00000042  6e                 outsb 
+00000043  7374                jnc 0xb9
+00000045  7275                jc 0xbc
+00000047  6374696f              arpl [ecx+ebp*2+0x6f],si
+0000004b  6e                 outsb 
+0000004c  4c                 dec esp
+0000004d  6973742e68220a           imul esi,[ebx+0x74],0xa22682e
+00000054  23696e               and ebp,[ecx+0x6e]
+00000057  636c7564              arpl [ebp+esi*2+0x64],bp
+0000005b  652022               and gs:[edx],ah
+0000005e  49                 dec ecx
+0000005f  6e                 outsb 
+00000060  7374                jnc 0xd6
+00000062  7275                jc 0xd9
+00000064  6374696f              arpl [ecx+ebp*2+0x6f],si
+00000068  6e                 outsb 
+00000069  5f                 pop edi
+0000006a  4c                 dec esp
+0000006b  6561                gs popa 
+0000006d  662e682220             cs push word 0x2022
+00000072  0a23                or ah,[ebx]
+00000074  696e636c756465           imul ebp,[esi+0x63],0x6564756c
+0000007b  2022                and [edx],ah
+0000007d  53                 push ebx
+0000007e  696d706c654675           imul ebp,[ebp+0x70],0x7546656c
+00000085  6e                 outsb 
+00000086  6374696f              arpl [ecx+ebp*2+0x6f],si
+0000008a  6e                 outsb 
+0000008b  732e                jnc 0xbb
+0000008d  68220a0a63             push dword 0x630a0a22
+00000092  6c                 insb 
+00000093  61                 popa 
+00000094  7373                jnc 0x109
+00000096  20506f               and [eax+0x6f],dl
+00000099  6c                 insb 
+0000009a  7955                jns 0xf1
+0000009c  6e                 outsb 
+0000009d  7061                jo 0x100
+0000009f  636b3b               arpl [ebx+0x3b],bp
+000000a2  0a0a                or cl,[edx]
+000000a4  636c6173              arpl [ecx+0x73],bp
+000000a8  7320                jnc 0xca
+000000aa  49                 dec ecx
+000000ab  6e                 outsb 
+000000ac  7374                jnc 0x122
+000000ae  7275                jc 0x125
+000000b0  6374696f              arpl [ecx+ebp*2+0x6f],si
+000000b4  6e                 outsb 
+000000b5  5f                 pop edi
+000000b6  54                 push esp
+000000b7  7265                jc 0x11e
+000000b9  657b0a               ?? jpo 0xc6
+000000bc  09496e               or [ecx+0x6e],ecx
+000000bf  7374                jnc 0x135
+000000c1  7275                jc 0x138
+000000c3  6374696f              arpl [ecx+ebp*2+0x6f],si
+000000c7  6e                 outsb 
+000000c8  5f                 pop edi
+000000c9  4c                 dec esp
+000000ca  6561                gs popa 
+000000cc  662a20               sub ah,[eax]
+000000cf  726f                jc 0x140
+000000d1  6f                 outsv 
+000000d2  743b                jz 0x10f
+000000d4  0a7075               or dh,[eax+0x75]
+000000d7  626c6963              bound ebp,[ecx+ebp*2+0x63]
+000000db  3a0a                cmp cl,[edx]
+000000dd  09496e               or [ecx+0x6e],ecx
+000000e0  7374                jnc 0x156
+000000e2  7275                jc 0x159
+000000e4  6374696f              arpl [ecx+ebp*2+0x6f],si
+000000e8  6e                 outsb 
+000000e9  5f                 pop edi
+000000ea  54                 push esp
+000000eb  7265                jc 0x152
+000000ed  652829               sub gs:[ecx],ch
+000000f0  7b72                jpo 0x164
+000000f2  6f                 outsv 
+000000f3  6f                 outsv 
+000000f4  743d                jz 0x133
+000000f6  4e                 dec esi
+000000f7  55                 push ebp
+000000f8  4c                 dec esp
+000000f9  4c                 dec esp
+000000fa  3b7d3b               cmp edi,[ebp+0x3b]
+000000fd  0a09                or cl,[ecx]
+000000ff  766f                jna 0x170
+00000101  6964204164642849          imul esp,[eax+0x41],0x49286464
+00000109  6e                 outsb 
+0000010a  7374                jnc 0x180
+0000010c  7275                jc 0x183
+0000010e  6374696f              arpl [ecx+ebp*2+0x6f],si
+00000112  6e                 outsb 
+00000113  4c                 dec esp
+00000114  6973742a20262c           imul esi,[ebx+0x74],0x2c26202a
+0000011b  20496e               and [ecx+0x6e],cl
+0000011e  7374                jnc 0x194
+00000120  7275                jc 0x197
+00000122  6374696f              arpl [ecx+ebp*2+0x6f],si
+00000126  6e                 outsb 
+00000127  4c                 dec esp
+00000128  6973742a20262c           imul esi,[ebx+0x74],0x2c26202a
+0000012f  20496e               and [ecx+0x6e],cl
+00000132  7374                jnc 0x1a8
+00000134  7275                jc 0x1ab
+00000136  6374696f              arpl [ecx+ebp*2+0x6f],si
+0000013a  6e                 outsb 
+0000013b  4c                 dec esp
+0000013c  6973742a202629           imul esi,[ebx+0x74],0x2926202a
+00000143  3b0a                cmp ecx,[edx]
+00000145  09766f               or [esi+0x6f],esi
+00000148  6964204164645f4c          imul esp,[eax+0x41],0x4c5f6464
+00000150  6561                gs popa 
+00000152  6628496e              sub [ecx+0x6e],cl
+00000156  7374                jnc 0x1cc
+00000158  7275                jc 0x1cf
+0000015a  6374696f              arpl [ecx+ebp*2+0x6f],si
+0000015e  6e                 outsb 
+0000015f  5f                 pop edi
+00000160  4c                 dec esp
+00000161  6561                gs popa 
+00000163  662a20               sub ah,[eax]
+00000166  262c20               es sub al,0x20
+00000169  696e74202c2049           imul ebp,[esi+0x74],0x49202c20
+00000170  6e                 outsb 
+00000171  7374                jnc 0x1e7
+00000173  7275                jc 0x1ea
+00000175  6374696f              arpl [ecx+ebp*2+0x6f],si
+00000179  6e                 outsb 
+0000017a  4c                 dec esp
+0000017b  6973742a20262c           imul esi,[ebx+0x74],0x2c26202a
+00000182  20496e               and [ecx+0x6e],cl
+00000185  7374                jnc 0x1fb
+00000187  7275                jc 0x1fe
+00000189  6374696f              arpl [ecx+ebp*2+0x6f],si
+0000018d  6e                 outsb 
+0000018e  4c                 dec esp
+0000018f  6973742a202629           imul esi,[ebx+0x74],0x2926202a
+00000196  3b0a                cmp ecx,[edx]
+00000198  09696e               or [ecx+0x6e],ebp
+0000019b  7420                jz 0x1bd
+0000019d  4f                 dec edi
+0000019e  62686f               bound ebp,[eax+0x6f]
+000001a1  6428636f              sub fs:[ebx+0x6f],ah
+000001a5  6e                 outsb 
+000001a6  7374                jnc 0x21c
+000001a8  206368               and [ebx+0x68],ah
+000001ab  61                 popa 
+000001ac  722a                jc 0x1d8
+000001ae  2c20                sub al,0x20
+000001b0  50                 push eax
+000001b1  6f                 outsv 
+000001b2  6c                 insb 
+000001b3  7955                jns 0x20a
+000001b5  6e                 outsb 
+000001b6  7061                jo 0x219
+000001b8  636b20               arpl [ebx+0x20],bp
+000001bb  26293b               sub es:[ebx],edi
+000001be  0a09                or cl,[ecx]
+000001c0  766f                jna 0x231
+000001c2  6964204f62686f64          imul esp,[eax+0x4f],0x646f6862
+000001ca  28496e               sub [ecx+0x6e],cl
+000001cd  7374                jnc 0x243
+000001cf  7275                jc 0x246
+000001d1  6374696f              arpl [ecx+ebp*2+0x6f],si
+000001d5  6e                 outsb 
+000001d6  5f                 pop edi
+000001d7  4c                 dec esp
+000001d8  6561                gs popa 
+000001da  662a20               sub ah,[eax]
+000001dd  262c20               es sub al,0x20
+000001e0  636f6e               arpl [edi+0x6e],bp
+000001e3  7374                jnc 0x259
+000001e5  206368               and [ebx+0x68],ah
+000001e8  61                 popa 
+000001e9  722a                jc 0x215
+000001eb  2c20                sub al,0x20
+000001ed  49                 dec ecx
+000001ee  6e                 outsb 
+000001ef  7374                jnc 0x265
+000001f1  7275                jc 0x268
+000001f3  6374696f              arpl [ecx+ebp*2+0x6f],si
+000001f7  6e                 outsb 
+000001f8  4c                 dec esp
+000001f9  6973742a20262c           imul esi,[ebx+0x74],0x2c26202a
+00000200  50                 push eax
+00000201  6f                 outsv 
+00000202  6c                 insb 
+00000203  7955                jns 0x25a
+00000205  6e                 outsb 
+00000206  7061                jo 0x269
+00000208  636b20               arpl [ebx+0x20],bp
+0000020b  262c20               es sub al,0x20
+0000020e  696e7420262c20           imul ebp,[esi+0x74],0x202c2620
+00000215  696e7420262c20           imul ebp,[esi+0x74],0x202c2620
+0000021c  696e742026293b           imul ebp,[esi+0x74],0x3b292620
+00000223  0a09                or cl,[ecx]
+00000225  766f                jna 0x296
+00000227  6964204f62686f64          imul esp,[eax+0x4f],0x646f6862
+0000022f  3228                xor ch,[eax]
+00000231  49                 dec ecx
+00000232  6e                 outsb 
+00000233  7374                jnc 0x2a9
+00000235  7275                jc 0x2ac
+00000237  6374696f              arpl [ecx+ebp*2+0x6f],si
+0000023b  6e                 outsb 
+0000023c  5f                 pop edi
+0000023d  4c                 dec esp
+0000023e  6561                gs popa 
+00000240  662a20               sub ah,[eax]
+00000243  26293b               sub es:[ebx],edi
+00000246  0a09                or cl,[ecx]
+00000248  696e7420436865           imul ebp,[esi+0x74],0x65684320
+0000024f  636b28               arpl [ebx+0x28],bp
+00000252  49                 dec ecx
+00000253  6e                 outsb 
+00000254  7374                jnc 0x2ca
+00000256  7275                jc 0x2cd
+00000258  6374696f              arpl [ecx+ebp*2+0x6f],si
+0000025c  6e                 outsb 
+0000025d  5f                 pop edi
+0000025e  4c                 dec esp
+0000025f  6561                gs popa 
+00000261  662a20               sub ah,[eax]
+00000264  262c20               es sub al,0x20
+00000267  49                 dec ecx
+00000268  6e                 outsb 
+00000269  7374                jnc 0x2df
+0000026b  7275                jc 0x2e2
+0000026d  6374696f              arpl [ecx+ebp*2+0x6f],si
+00000271  6e                 outsb 
+00000272  4c                 dec esp
+00000273  6973742a20262c           imul esi,[ebx+0x74],0x2c26202a
+0000027a  20496e               and [ecx+0x6e],cl
+0000027d  7374                jnc 0x2f3
+0000027f  7275                jc 0x2f6
+00000281  6374696f              arpl [ecx+ebp*2+0x6f],si
+00000285  6e                 outsb 
+00000286  4c                 dec esp
+00000287  6973742a20262c           imul esi,[ebx+0x74],0x2c26202a
+0000028e  20496e               and [ecx+0x6e],cl
+00000291  7374                jnc 0x307
+00000293  7275                jc 0x30a
+00000295  6374696f              arpl [ecx+ebp*2+0x6f],si
+00000299  6e                 outsb 
+0000029a  4c                 dec esp
+0000029b  6973742a20262c           imul esi,[ebx+0x74],0x2c26202a
+000002a2  20496e               and [ecx+0x6e],cl
+000002a5  7374                jnc 0x31b
+000002a7  7275                jc 0x31e
+000002a9  6374696f              arpl [ecx+ebp*2+0x6f],si
+000002ad  6e                 outsb 
+000002ae  4c                 dec esp
+000002af  6973742a20262c           imul esi,[ebx+0x74],0x2c26202a
+000002b6  20626f               and [edx+0x6f],ah
+000002b9  6f                 outsv 
+000002ba  6c                 insb 
+000002bb  2026                and [esi],ah
+000002bd  20666c               and [esi+0x6c],ah
+000002c0  61                 popa 
+000002c1  67293b               sub [bp+di],edi
+000002c4  0a09                or cl,[ecx]
+000002c6  626f6f               bound ebp,[edi+0x6f]
+000002c9  6c                 insb 
+000002ca  204973               and [ecx+0x73],cl
+000002cd  5f                 pop edi
+000002ce  45                 inc ebp
+000002cf  6d                 insv 
+000002d0  7074                jo 0x346
+000002d2  7928                jns 0x2fc
+000002d4  293b                sub [ebx],edi
+000002d6  0a09                or cl,[ecx]
+000002d8  766f                jna 0x349
+000002da  6964204465737472          imul esp,[eax+0x44],0x72747365
+000002e2  7563                jnz 0x347
+000002e4  746f                jz 0x355
+000002e6  7228                jc 0x310
+000002e8  49                 dec ecx
+000002e9  6e                 outsb 
+000002ea  7374                jnc 0x360
+000002ec  7275                jc 0x363
+000002ee  6374696f              arpl [ecx+ebp*2+0x6f],si
+000002f2  6e                 outsb 
+000002f3  5f                 pop edi
+000002f4  4c                 dec esp
+000002f5  6561                gs popa 
+000002f7  662a20               sub ah,[eax]
+000002fa  26293b               sub es:[ebx],edi
+000002fd  0a09                or cl,[ecx]
+000002ff  7e49                jng 0x34a
+00000301  6e                 outsb 
+00000302  7374                jnc 0x378
+00000304  7275                jc 0x37b
+00000306  6374696f              arpl [ecx+ebp*2+0x6f],si
+0000030a  6e                 outsb 
+0000030b  5f                 pop edi
+0000030c  54                 push esp
+0000030d  7265                jc 0x374
+0000030f  652829               sub gs:[ecx],ch
+00000312  3b0a                cmp ecx,[edx]
+00000314  09766f               or [esi+0x6f],esi
+00000317  696420436f707943          imul esp,[eax+0x43],0x4379706f
+0000031f  6f                 outsv 
+00000320  6d                 insv 
+00000321  6d                 insv 
+00000322  61                 popa 
+00000323  6e                 outsb 
+00000324  6428496e              sub fs:[ecx+0x6e],cl
+00000328  7374                jnc 0x39e
+0000032a  7275                jc 0x3a1
+0000032c  6374696f              arpl [ecx+ebp*2+0x6f],si
+00000330  6e                 outsb 
+00000331  5f                 pop edi
+00000332  4c                 dec esp
+00000333  6561                gs popa 
+00000335  662a20               sub ah,[eax]
+00000338  262c20               es sub al,0x20
+0000033b  636f6e               arpl [edi+0x6e],bp
+0000033e  7374                jnc 0x3b4
+00000340  206368               and [ebx+0x68],ah
+00000343  61                 popa 
+00000344  722a                jc 0x370
+00000346  207374               and [ebx+0x74],dh
+00000349  7229                jc 0x374
+0000034b  3b0a                cmp ecx,[edx]
+0000034d  7d3b                jnl 0x38a
+0000034f  0a0a                or cl,[edx]
+00000351  23656e               and esp,[ebp+0x6e]
+00000354  db 0x64
+00000355  db 0x69
+00000356  db 0x66
+00000357  db 0x0a
+
+
+
+Start of Dynamic Analize!
+
+
+236966               00000000  and ebp,[ecx+0x66]
+Step Number=0
+6e                 00000000  outsb 
+Step Number=1
+64656620496e            00000000  and gs:[ecx+0x6e],cl
+Step Number=2
+7374                00000000  jnc 0x76
+Step Number=3
+????????????????????????????????????????????????
+706c              00000000  ILLEGAL = jo 0x6e
+Step Number=4
+????????????????????????????????????????????????
+????????????????????????????????????????????????
+6546              00000000  ILLEGAL = gs inc esi
+Step Number=5
+????????????????????????????????????????????????
+????????????????????????????????????????????????
+756e              00000000  ILLEGAL = jnz 0x70
+Step Number=6
+????????????????????????????????????????????????
+743d                00000000  jz 0x3f
+Step Number=7
+4e                 00000000  dec esi
+Step Number=8
+55                 00000000  push ebp
+Step Number=9
+4c                 00000000  dec esp
+Step Number=10
+4c                 00000000  dec esp
+Step Number=11
+3b7d3b               00000000  cmp edi,[ebp+0x3b]
+Step Number=12
+0a09                00000000  or cl,[ecx]
+Step Number=13
+766f                00000000  jna 0x71
+Step Number=14
+6964204164642849          00000000  imul esp,[eax+0x41],0x49286464
+Step Number=15
+6e                 00000000  outsb 
+Step Number=16
+7374                00000000  jnc 0x76
+Step Number=17
+????????????????????????????????????????????????
+262c20             00000000  ILLEGAL = es sub al,0x20
+Step Number=18
+????????????????????????????????????????????????
+????????????????????????????????????????????????
+49               00000000  ILLEGAL = dec ecx
+Step Number=19
+????????????????????????????????????????????????
+????????????????????????????????????????????????
+6e               00000000  ILLEGAL = outsb 
+Step Number=20
+????????????????????????????????????????????????
+7374                00000000  jnc 0x76
+Step Number=21
+7275                00000000  jc 0x77
+Step Number=22
+????????????????????????????????????????????????
+262c50             00000000  ILLEGAL = es sub al,0x50
+Step Number=23
+????????????????????????????????????????????????
+6f                 00000000  outsv 
+Step Number=24
+6c                 00000000  insb 
+Step Number=25
+7955                00000000  jns 0x57
+Step Number=26
+6e                 00000000  outsb 
+Step Number=27
+7061                00000000  jo 0x63
+Step Number=28
+636b20               00000000  arpl [ebx+0x20],bp
+Step Number=29
+262c20               00000000  es sub al,0x20
+Step Number=30
+696e7420262c20           00000000  imul ebp,[esi+0x74],0x202c2620
+Step Number=31
+696e7420262c20           00000000  imul ebp,[esi+0x74],0x202c2620
+Step Number=32
+696e742026293b           00000000  imul ebp,[esi+0x74],0x3b292620
+Step Number=33
+0a09                00000000  or cl,[ecx]
+Step Number=34
+766f                00000000  jna 0x71
+Step Number=35
+6964204f62686f64          00000000  imul esp,[eax+0x4f],0x646f6862
+Step Number=36
+3228                00000000  xor ch,[eax]
+Step Number=37
+49                 00000000  dec ecx
+Step Number=38
+6e                 00000000  outsb 
+Step Number=39
+7374                00000000  jnc 0x76
+Step Number=40
+6374696f              00000000  arpl [ecx+ebp*2+0x6f],si
+Step Number=41
+6e                 00000000  outsb 
+Step Number=42
+4c                 00000000  dec esp
+Step Number=43
+6973742a20262c           00000000  imul esi,[ebx+0x74],0x2c26202a
+Step Number=44
+20626f               00000000  and [edx+0x6f],ah
+Step Number=45
+6f                 00000000  outsv 
+Step Number=46
+6c                 00000000  insb 
+Step Number=47
+2026                00000000  and [esi],ah
+Step Number=48
+20666c               00000000  and [esi+0x6c],ah
+Step Number=49
+61                 00000000  popa 
+Step Number=50
+67293b               00000000  sub [bp+di],edi
+Step Number=51
+0a09                00000000  or cl,[ecx]
+Step Number=52
+626f6f               00000000  bound ebp,[edi+0x6f]
+Step Number=53
+6c                 00000000  insb 
+Step Number=54
+204973               00000000  and [ecx+0x73],cl
+Step Number=55
+5f                 00000000  pop edi
+Step Number=56
+45                 00000000  inc ebp
+Step Number=57
+6d                 00000000  insv 
+Step Number=58
+7074                00000000  jo 0x76
+Step Number=59
+7928                00000000  jns 0x2a
+Step Number=60
+????????????????????????????????????????????????
+3b0a              00000000  ILLEGAL = cmp ecx,[edx]
+Step Number=61
+????????????????????????????????????????????????
+????????????????????????????????????????????????
+097e49             00000000  ILLEGAL = or [esi+0x49],edi
+Step Number=62
+????????????????????????????????????????????????
+6e                 00000000  outsb 
+Step Number=63
+Condition jump leads outside the program
